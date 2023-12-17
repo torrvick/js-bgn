@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семинар 1</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: #282828;
+        }
+    </style>
+
+    <script>
+        // Задание 1
+        console.log("%cЗадание 1", "font-size:14px; font-weight:bold");
+        let celsius = prompt("Введите температуру в градусах Цельсия");
+        if (parseFloat(celsius)) {
+            let fahrenheit = (9 / 5) * celsius + 32;
+            console.log("%cТемпература в градусах Цельсия: " + celsius, "padding-left: 20px");
+            console.log("%cТемпература в градусах Фаренгейта: " + fahrenheit, "padding-left: 20px");
+        } else {
+            console.log("%cНужно ввести действительное число", "padding-left: 20px");
+        }
+
+
+        // Задание 2
+        console.log("--------------------------------");
+        console.log("%cЗадание 2", "font-size:14px; font-weight:bold");
+        let name = prompt("Введите Ваше имя");
+        if (name && !parseInt(name)) {
+            let admin = name;
+            console.log("%cАдмином теперь будет " + admin, "padding-left: 20px");
+        } else {
+            console.log("%cАдмина пока нет", "padding-left: 20px");
+        }
+    </script>
+</body>
+
+</html>

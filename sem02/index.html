@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семинар 2</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: #282828;
+        }
+    </style>
+
+    <script>
+        const logTitleStyle = "font-size:14px; font-weight:bold";
+        const logTextStyle = "padding-left: 20px";
+        // Задание 1
+        console.log("%cЗадание 1", logTitleStyle);
+        let num1 = prompt("Введите первое число");
+        let num2 = prompt("Введите второе число");
+
+        if (parseInt(num1) && parseInt(num2)) {
+            console.log(`%cЧисла ${num1} и ${num2}`, logTextStyle);
+            if (num1 <= 1 && num2 >= 3) {
+                console.log("%cУсловие выполнено", logTextStyle);
+            } else {
+                console.log("%cУсловие не выполнено", logTextStyle);
+            }
+        } else {
+            console.log("%cНужно ввести действительное число", logTextStyle);
+        }
+
+        // Задание 2
+        console.log("");
+        console.log("%cЗадание 2", logTitleStyle);
+        let test = false;
+        test ? console.log("%c+++" , logTextStyle) : console.log("%c---" , logTextStyle);
+
+        // Задание 3
+        console.log("");
+        console.log("%cЗадание 3", logTitleStyle);
+        let day = prompt("Введите число месяца");
+        let decade = Math.ceil(day / 10);
+        if (1 <= decade && decade <= 3) {
+            console.log(`%cЧисло ${day} попадает в ${decade} декаду`, logTextStyle);
+        } else {
+            console.log("%cЧисло не похоже на число месяца", logTextStyle);
+        }
+
+        // Задание 4
+        console.log("");
+        console.log("%cЗадание 4", logTitleStyle);
+        let number = prompt("Введите число");
+        if (parseInt(number)) {
+            const digNames = ["тысяч", "сотен", "десятков", "единиц"];
+            let logString = `%cВ числе ${number} количество `;
+            for (let i = 3, j = 0; i >= 0; i--, j++) {
+                logString += `${digNames[j]}: ${parseInt(number % Math.pow(10, i + 1) / Math.pow(10, i))}`;
+                i !== 0 ? logString += `, ` : logString += ``;
+            }
+            console.log(logString, logTextStyle);
+        } else {
+            console.log("%cНужно ввести действительное число", logTextStyle);
+        }
+    </script>
+
+
+</body>
+
+</html>
