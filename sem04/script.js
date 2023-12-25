@@ -12,8 +12,9 @@ for (i = 1; i < 11; i++) {
 // Задание 2
 console.log("\n%cЗадание 2", logTitleStyle);
 const arr2 = [1, 2, 3, 4, 5, 6, 7];
+console.log(`%cИсходный массив: ${arr2.join(", ")}`, logTextStyle);
 arr2.splice(3, 2);
-console.log(`%c${arr2.join(", ")}`, logTextStyle);
+console.log(`%cСрез массива: ${arr2.join(", ")}`, logTextStyle);
 
 // Задание 3
 console.log("\n%cЗадание 3", logTitleStyle);
@@ -29,5 +30,5 @@ console.log(`%cВ массиве ${arr3.includes(3) ? "присутствует"
 // Задание 4
 console.log("\n%cЗадание 3", logTitleStyle);
 for (let i = 1; i < 21; i++) {
-	console.log("x".repeat(i));
+	console.log(`%c${'x'.repeat(i)}`, logTextStyle);
 }
